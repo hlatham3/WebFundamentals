@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>JavaScript Range Practice</title>
+      	<script type="text/javascript">
+
+
+	      	function printNames(arr, sym, reverse){
+	      		if (!reverse) {
+		      		for (var i = 0; i < arr.length; i++){
+		      			console.log(i + " " + sym + " " + arr[i]);
+		      		}
+	      		} else {
+		      		for (var i = arr.length - 1; i >= 0; i--){
+		      			console.log(i + " " + sym + " " + arr[i]);
+		      		}
+		      	}
+	      	}
+	      	
+	      	var arr;
+	      	var sym;
+	      	var reverse;
+
+	      	printNames(["James", "Jill", "Jane", "Jack"], "->");
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

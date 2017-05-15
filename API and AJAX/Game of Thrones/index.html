@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+      
+
+        $('img').click(function(){
+
+          $( "#details" ).html("<legend> House Details </legend>");
+          
+          $.get("https://anapioficeandfire.com/api/houses/" + this.id + "/", function(res) {
+              
+              var html_str = "";
+              html_str = "<p>Name: " + res.name + "</p>";
+              $( "#details" ).append(html_str);
+
+              html_str = "";
+              html_str = "<p>Words: " + res.words + "</p>";
+              $( "#details" ).append(html_str);
+
+              html_str = "";
+              html_str = "<br><p id='bottom'>Titles: " + res.titles + "</p>";
+              $( "#details" ).append(html_str);
+
+          }, "json");
+
+        });
+
+      });
+
+    </script>
+   </head>
+   <body>
+      <div id="wrapper">
+        <div id="gotpics">
+          <img id="362" src="./images/stark.jpg" alt="stark">
+          <img id="378" src="./images/targaryen.jpg" alt="targaryen">
+          <img id="229" src="./images/lannister.jpg" alt="lannister">
+          <img id="17" src="./images/baratheon.png" alt="baratheon">
+        </div>
+        <fieldset id="details">
+          <legend> House Details </legend>
+          <br>
+        </fieldset>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,65 @@
+*{
+	/*outline: thin dotted red;*/
+}
+
+#wrapper{
+	width: 1000px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#leftpage{
+	width: 450px;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+#rightpage{
+	width: 450px;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+#btn{
+	border: thin solid, black;
+	width: 400px;
+	height: 130px;
+	margin: auto auto;
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+p{
+	margin: 0px;
+	text-align: center;
+}
+
+form{
+	width: 330px;
+}
+
+label{
+    display:inline-block;
+    width:100px;
+   	text-align: left;
+}
+
+input{
+	width: 200px;
+}
+
+#submitbut{
+	background-color: gray
+	border: thin solid black;
+	width: 75px;
+	box-shadow: 5px 5px gray;
+}
+
+#innertogbut{
+	font-weight: bold;
+	font-size: 15px;
+}

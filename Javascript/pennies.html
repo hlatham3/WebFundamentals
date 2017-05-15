@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>JavaScript Pennies Practice</title>
+      	<script type="text/javascript">
+
+	      	var penny = .01;
+	      	var total = .01;
+	      	total.toFixed(2);
+	      	var bool = true;
+	      	var daystotengrand = 0;
+
+	      	for (var days = 2; days < 31; days++){
+	      		penny = penny * 2;
+	      		total = total + penny;
+	      		if (total >= 10000 && bool == true) {
+	      			daystotengrand = days;
+	      			bool = false;
+	      		}
+	      	}
+
+	      	console.log(daystotengrand + " days until $10,000 or more");
+	      	console.log(total);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

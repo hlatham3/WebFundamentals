@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- If don't use sort, find largest number in array, put in new array and remove it. (if want to sort to new array, else don't save it in an array) Need to reset counter to 1 every time. Wouldn't even need an array if you only loop as many times as the find passed in. OR do a bubble sort only running through until you find the find number. -->
+
+
+   <head>
+      	<title>Practice</title>
+      	<script type="text/javascript">
+   
+
+		function FindXLargestNum(arr, find){
+			var num;
+			var sortarray = arr;
+			sortarray.sort(function(a, b){return b-a});
+			if ( find > arr.length) {
+				console.log("You asked for a number position larger then the array size!");
+			} else if (find > 0) {
+				num = arr[find - 1];
+				console.log(num);
+			} else  {
+				console.log("You didn't ask for a number to return!");
+			}
+		}
+
+		var arr = [];
+		FindXLargestNum([1,100,3,4,9,23], 5);
+
+		</script>
+	</head>
+	<body></body>
+</html>

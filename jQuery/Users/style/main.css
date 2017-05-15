@@ -1,0 +1,49 @@
+*{
+	/*outline: thin dotted red;*/
+}
+
+table{
+	border: thin solid black;
+  	border-collapse: separate;
+  	border-spacing: 50px 0;
+}
+
+tr{
+  padding: 10px 0;
+}
+
+td{
+  padding: 10px 0;
+}
+
+th{
+	text-decoration: underline;
+	text-align: left;
+}
+
+h1{
+	text-decoration: underline;
+	font-size: 30px;
+}
+
+label{
+    display:inline-block;
+    width:100px;
+   	text-align: right;
+}
+
+form{
+	width: 310px;
+}
+
+input{
+	width: 200px;
+}
+
+#submitbut{
+	border-radius: 4px;
+	background-color: gray
+	border: thin solid black;
+	float: right;
+	width: 75px;
+}

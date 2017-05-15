@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>Ninja to Cat</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+          
+        $("#ninjapic0").click(function(){
+       
+          console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+          var src = $(this).children().attr('src')
+          var altsrc = $(this).children().attr('data-alt-src');
+          console.log(src, altsrc)
+
+          $( "#ninjapic0" ).html( "<img class='picofninja0' src=" + altsrc + " data-alt-src=" + src + " alt='a pic of ninja0 and cat 0'>" );
+            console.log($("#ninjapic0" ).html());
+        });
+
+        $("#ninjapic1").click(function(){
+
+          console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+          var src = $(this).children().attr('src')
+          var altsrc = $(this).children().attr('data-alt-src');
+          console.log(src, altsrc)
+
+          $( "#ninjapic1" ).html( "<img class='picofninja1' src=" + altsrc + " data-alt-src=" + src + " alt='a pic of ninja1 and cat 1'>" );
+        });
+
+        $("#ninjapic2").click(function(){
+
+          console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+          var src = $(this).children().attr('src')
+          var altsrc = $(this).children().attr('data-alt-src');
+          console.log(src, altsrc)
+
+          $( "#ninjapic2" ).html( "<img class='picofninja2' src=" + altsrc + " data-alt-src=" + src + " alt='a pic of ninja2 and cat 2'>" );
+        });
+
+        $("#ninjapic3").click(function(){
+
+          console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+          var src = $(this).children().attr('src')
+          var altsrc = $(this).children().attr('data-alt-src');
+          console.log(src, altsrc)
+
+          $( "#ninjapic3" ).html( "<img class='picofninja3' src=" + altsrc + " data-alt-src=" + src + " alt='a pic of ninja3 and cat 3'>" );
+        });
+
+        $("#ninjapic4").click(function(){
+
+          console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+          var src = $(this).children().attr('src')
+          var altsrc = $(this).children().attr('data-alt-src');
+          console.log(src, altsrc)
+
+          $( "#ninjapic4" ).html( "<img class='picofninja4' src=" + altsrc + " data-alt-src=" + src + " alt='a pic of ninja4 and cat 4'>" );
+        });
+
+      });
+
+    </script>
+   </head>
+   <body>
+      <div id="wrapper">
+        <div id="ninjaDiv">
+          <div id="ninjapic0">
+            <img class="picofninja0" src="./images/ninja0.png" data-alt-src="./images/cat0.png" alt="a pic of ninja0 and cat 0">
+          </div>
+          <div id="ninjapic1">
+            <img class="picofninja1" src="./images/ninja1.png" data-alt-src="./images/cat1.png" alt="a pic of ninja0 and cat 0">
+          </div>
+          <div id="ninjapic2">
+            <img class="picofninja2" src="./images/ninja2.png" data-alt-src="./images/cat2.png" alt="a pic of ninja0 and cat 0">
+          </div>
+          <div id="ninjapic3">
+            <img class="picofninja3" src="./images/ninja3.png" data-alt-src="./images/cat3.png" alt="a pic of ninja0 and cat 0">
+          </div>
+          <div id="ninjapic4">
+            <img class="picofninja4" src="./images/ninja4.png" data-alt-src="./images/cat4.png" alt="a pic of ninja0 and cat 0">
+          </div>
+        </div>
+      </div>
+   </body>
+</html>

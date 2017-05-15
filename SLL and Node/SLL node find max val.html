@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>SLL and Node Practice Find Max Value</title>
+      	<script type="text/javascript">
+
+
+	      	function SLL(){
+	      		this.head = null;
+	      	}
+
+	      	function Node(val){
+	      		this.value = val;
+	      		this.next = null;
+	      	}
+
+	      	SLL.prototype.addBack = function(val){
+	      		var myTempNode = new Node(val);
+	      		if (this.head == null){
+	      			this.head = myTempNode;
+	      		} else {
+	      			var cur = this.head;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      			}
+	      			cur.next = myTempNode;
+	      		}
+	      	}
+
+	      	SLL.prototype.max = function(){
+	      		if(!this.head){
+					return null;
+				} else {
+					var max = this.head.value;
+					var cur = this.head.next;
+					while (cur) {
+						if (cur.value > max) {
+							max = cur.value;
+						}
+					cur = cur.next;
+					}
+					return max;
+				}
+			}
+
+
+	      	var val;
+	      	var mySLL = new SLL();
+	      	console.log(mySLL);
+
+	      	mySLL.addBack(1);
+	      	mySLL.addBack(2);
+	      	mySLL.addBack(3);
+
+	      	var maxSLLvalue = mySLL.max();
+	      	console.log(maxSLLvalue);
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

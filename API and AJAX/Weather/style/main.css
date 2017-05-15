@@ -1,0 +1,49 @@
+/*CSS reset settings here*/
+*{
+ /*outline: thin dotted red;*/
+}
+
+#wrapper{
+ width: 1000px;
+}
+
+#entercity{
+	height: 100px;
+	display: block;
+}
+
+#cityinfo{
+	height: 200px;
+	display: block;
+}
+
+input{
+	width: 200px;
+	border: thin, solid, black;
+	height: 25px;
+	font-size: 15px;
+}
+
+#submitbut{
+	border-radius: 4px;
+	background-color: transparent;
+	height: 30px;
+	font-size: 15px;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: bold;
+	display: block;
+}
+
+h4{
+	font-size: 25px;
+	display: block;
+}
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Card jQuery</title>
+		<link rel="stylesheet" type="text/css" href="./style/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+        	console.log($);
+
+
+      		$(document).ready(function(){
+
+
+				$('form').submit(function(){
+				    console.log($(this).serialize());
+				    var str = $(this).serialize();
+				    console.log(str);
+				    var tempcounter = 1;
+				    var firstname = "";
+				    var lastname = "";
+				    var desc = "";
+				    for (var i = 0; i < str.length; i++){
+				    	while (str[i] != '='){
+				    		i++;
+				    	}
+				    	i++;
+				    	while (str[i] != '&' && i < str.length){
+				    		console.log(str[i]);
+				    		if (tempcounter === 1) {
+				    			firstname += str[i];
+				    		} else if (tempcounter === 2) {
+				    			lastname += str[i];
+				    		} else { 
+				    			desc += str[i];
+				    		}
+				  			i++;
+				    	}
+				    	tempcounter++;
+				    }
+
+				    console.log(firstname);
+				    console.log(lastname);
+				    console.log(desc);
+
+				    var tempappendstr = "<button id='btn'><p class='togglebut'><h id='innertogbut'>" + firstname + " " + lastname + "</h><br> <br>Click for description!</p><p class='togglebut' style='display: none'>" + desc + "</p></button>";
+
+				    console.log(tempappendstr);
+
+				    $('#rightpage').append(tempappendstr);
+				    $('form').trigger('reset');
+				    return false;
+				});
+
+				$(document).on('click', '#btn', function(){
+					console.log($(this));
+
+					$(this).children().toggle();
+				});
+
+      	  	});
+
+    	</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id='leftpage'>
+				<form align="left"><br>
+		            <label>First name: </label>
+		            <input align="left" type="text" name="firstname"><br><br>
+		            <label>Last name: </label>
+		            <input align="left" type="text" name="lastname"><br><br>
+		            <label>Description: </label><br><br>
+		            <textarea name="description" rows="4" cols="48" placeholder='Enter description:'></textarea>
+		            <br><br>
+					<input id="submitbut" type="submit" value="Add User">
+				</form>
+				
+			</div>
+			<div id='rightpage'>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,289 @@
+/*CSS reset settings here*/
+*{
+ /*outline: thin dotted red;*/
+}
+
+#wrapper{
+ width: 960px;
+ background: radial-gradient(rgba(156, 39, 176, 0.35), black);
+}
+
+#header{
+ height: 80px;
+ width: 960px;
+ margin: 0;
+ background-color: #e0e0e0;
+}
+
+#headername{
+ display: inline-block;
+ font-family: "Comic Sans MS", Times, serif;
+ font-size: 30px;
+ font-weight: bold;
+ padding-top: 10px;
+ padding-left: 10px;
+}
+
+#headersaying{
+ display: inline-block;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 20px;
+ font-weight: bold;
+ float: right;
+ padding-top: 20px;
+ padding-right: 50px;
+}
+
+#PicAndAbout{
+ height: 325px;
+ width: 960px;
+ vertical-align: top;
+}
+
+#myPic{
+ height: 280px;
+ width: 430px;	
+ display: inline-block;
+ margin: 15px 15px 5px 15px;
+ vertical-align: top;
+}
+
+.picOfMe{
+ border: thick solid grey;
+ max-width: 100%;
+ max-height: 100%;
+}
+
+#aboutMe{
+ height: 280px;
+ width: 430px;	
+ display: inline-block;
+ margin: 15px 15px 5px 15px;
+ font-size: 17px;
+ margin: 15px 15px 5px 15px;
+ vertical-align: top;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+p{
+ margin: 0px 0px 0px 0px;
+ padding-top: 20px;
+ padding-left: 10px;
+}
+
+a{
+ padding-left: 10px;
+ color: black;
+}
+
+#aboutMeTitle{
+ height: 30px;
+ width: 425px;	
+ background-color: #e0e0e0;
+ display: block;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 20px;
+ font-weight: bold;
+ float: left;
+ color: white;
+ padding-top: 5px;
+ padding-left: 5px;
+ background: linear-gradient(white, grey, white);
+}
+
+#contentBoxes{
+ height: 550px;
+ width: 960px;
+ padding: 10px 10px 10px 10px;
+ background: radial-gradient(, white);
+}
+
+.contentBoxes{
+ display: inline-block;
+ vertical-align: top;
+}
+
+#laModeBox{
+ height: 530px;
+ width: 275px;
+ margin: 10px 10px 10px 20px;
+}
+
+#contentTitlelaMode{
+ height: 30px;
+ background-color: #e0e0e0;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 20px;
+ font-weight: bold;
+ color: white;
+ padding-top: 5px;
+ padding-left: 5px;
+ display: block;
+ background: linear-gradient(white, grey, white);
+}
+
+#contentPiclaMode{ 
+ height: 150px;
+ display: block;
+}
+
+#contentExplaMode{ 
+ height: 150px;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 15px;
+ display: block;
+ padding-top: 5px;
+ padding-left: 5px;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+#contentTechnologieslaMode{
+ height: 150px;
+ display: block;
+ padding-top: 5px;
+ padding-left: 5px;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+#familyContactsBox{
+ height: 530px;
+ width: 275px;	
+ margin: 10px 10px 10px 10px;
+}
+
+#contentTitlefamilyContacts{
+ height: 30px;
+ background-color: #e0e0e0;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 20px;
+ font-weight: bold;
+ color: white;
+ padding-top: 5px;
+ padding-left: 5px;
+ display: block;
+ background: linear-gradient(white, grey, white);
+}
+
+#contentPicfamilyContacts{ 
+ height: 150px;
+ display: block;
+}
+
+#contentExpfamilyContacts{ 
+ height: 150px;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 15px;
+ display: block;
+ padding-top: 5px;
+ padding-left: 5px;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+#contentTechnologiesfamilyContacts{
+ height: 150px;
+ display: block;
+ padding-top: 5px;
+ padding-left: 5px;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+#fiveElevenBox{
+ height: 530px;
+ width: 275px;
+ margin: 10px 10px 10px 10px;	
+}
+
+#contentTitlefiveEleven{
+ height: 30px;
+ background-color: #e0e0e0;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 20px;
+ font-weight: bold;
+ color: white;
+ padding-top: 5px;
+ padding-left: 5px;
+ display: block;
+ background: linear-gradient(white, grey, white);
+}
+
+#contentPicfiveEleven{ 
+ height: 150px;
+ display: block;
+}
+
+#contentExpfiveEleven{ 
+ height: 150px;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 15px;
+ display: block;
+ padding-top: 5px;
+ padding-left: 5px;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+#contentTechnologiesfiveEleven{
+ height: 150px;
+ padding-top: 5px;
+ padding-left: 5px;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+.picContent{
+ max-width: 100%;
+ max-height: 100%;
+}
+
+.techpics{
+ height: 40px;
+ width: 40px;
+ padding-right: 10px;
+}
+
+button{
+ border-radius: 8px;
+ background-color: green;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 15px;
+ color: white;
+ border: 2px solid black;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ margin-top: 15px;
+}
+
+#buttoncenter{
+ height: 50px;
+ text-align: center;
+ background: linear-gradient(to right, white, thistle); 
+}
+
+#footer{
+ height: 80px;
+ width: 960px;
+ background-color: #e0e0e0;
+}
+
+#footerContactInfo{
+ display: block;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 15px;
+ height: 30px;
+ width: 400px;
+ margin: auto auto;
+ text-align: center;
+}
+
+.techpicsend{
+ height: 20px;
+ width: 20px;
+}
+
+#footerLinks{
+ display: block;
+ font-family: "Times New Roman", Times, serif;
+ font-size: 15px;
+ height: 30px;
+ width: 400px;
+ margin: auto auto;
+}
+
+

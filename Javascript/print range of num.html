@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>JavaScript Range Practice</title>
+      	<script type="text/javascript">
+
+	      	var start;
+	      	var end;
+	      	var skip;
+
+	      	function printRange(start, end, skip){
+	      		if (skip == undefined){
+	      			if (end == undefined){
+						end = start;
+						start = 0;
+						skip = 1;
+					} else {
+	      				skip = 1;
+					}
+	      		}
+	      		while (start < end){
+	      			console.log(start);
+	      			start = start + skip;
+	      		}
+	      	}
+
+	      	printRange(-100, -20, 5);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

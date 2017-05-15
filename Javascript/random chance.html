@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>Random Chance</title>
+      	<script type="text/javascript">
+
+
+      	function numQuarters(num){
+      		var wonamt = 0;
+      		var odds;
+
+      		while (num > 0){
+      			odds = Math.trunc(Math.random() * 100);
+      			if ( odds != 1 ) {
+      				console.log("You lost this game!");
+      				num--;
+      			} 
+      			else {
+      				wonamt = Math.trunc(Math.random() * 50)+50;
+      				console.log("You won " + wonamt + " quarters!");
+      				num += wonamt;
+      			}
+      			console.log("Total left to spend: " + num);
+      		}
+
+      		console.log("Your out of money!");
+      		return 0;
+      	}
+
+      	var num = 0;
+      	numQuarters(100);
+
+     	</script>
+
+	</head>
+</html>

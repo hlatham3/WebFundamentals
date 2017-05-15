@@ -1,0 +1,50 @@
+/**{
+	outline: thin dotted red;
+}
+*/
+
+.picArod{
+	height: 200px;
+	width: 300px;
+	border: thin solid gold;
+}
+
+#header{
+	outline: thin solid black;
+	text-align: center;
+	max-width: 600px;
+	background-color: green;
+	margin: auto auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+table{
+	margin: auto auto;
+	margin-top: 100px;
+	width: 600px;
+	height: 150px;
+	border: thin solid black;
+}
+
+.headerBox{
+	height: 30px;
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+a{
+	color: gold;
+}
+
+table th{
+	background-color: green;
+}
+
+td{
+	text-align: center;
+	background-color: gold;
+}
+

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      console.log($);
+
+      $(document).ready(function(){
+      
+        $('#click').click(function(){
+          alert('You are now working with jQuery!');
+        });
+
+        $('#hide').click(function(){
+          $('.showhide').hide();
+        });
+
+        $('#show').click(function(){
+          $('.showhide').show();
+        });
+
+        $('#toggle').click(function() {
+          $('.togglep').toggle();
+        });
+
+        $( '#slidedown' ).click(function() {
+          $( '.slidedownupp' ).slideDown( "slow", function() {
+          });
+        });
+
+        $( '#slideup' ).click(function() {
+          $( '.slidedownupp' ).slideUp( "slow", function() {
+          });
+        });
+
+        $( "#slidetoggle" ).click(function() {
+          $( ".slidetogglep" ).slideToggle( "slow", function() {
+          });
+        });
+
+        $( "#fadein" ).click(function() {
+          $( ".fadeinoutp" ).fadeIn( "slow", function() {
+          });
+        });
+
+        $( "#fadeout" ).click(function() {
+          $( ".fadeinoutp" ).fadeOut( "slow", function() {
+          });
+        });
+
+        $('#addclass').click(function(){
+          $( ".addclassp" ).addClass( "red" );
+        });
+
+        $('#before').click(function(){
+          $( ".beforep" ).before( "Hello" );
+        });
+
+        $('#after').click(function(){
+         $( ".afterp" ).after( "Good Bye" );
+        });
+
+        $('#append').click(function(){
+          $( ".appendp" ).append( "<strong>end!</strong>");
+        });
+
+        $('#html').click(function(){
+          $( ".htmlp" ).html( "<span class='underline'>This adds HTML to this p class, adding text and underlining the text.</span>" );
+        });
+
+        $('#attr').click(function(){
+          let temp = $('.attrimg').attr('src');
+          $('.attrimg').attr('src', $('.attrimg').attr('data-alt-src'));
+          $('.attrimg').attr('data-alt-src', temp);
+        });
+
+        $( '#val' ).click(function() {
+          var text = "I want to return text.";
+          $( "#vali" ).val( text );
+        });
+
+        $( '#text' ).click(function() {
+          $( ".textp" ).text( "This is the new text!" );
+        });
+
+        $( '#data' ).click(function() {
+          $( ".datap" ).data( "name", { first: "Heather", last: "Latham" } );
+          $( ".datas:first" ).text( $( ".datap" ).data( "name" ).first );
+          $( ".datas:last" ).text( $( ".datap" ).data( "name" ).last );
+        });
+
+      });
+
+    </script>
+   </head>
+   <body>
+      <div id="wrapper">
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="click" type="button">click</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Click</div>
+            <div id="functionDesc">
+              <p>Click the button to show a message.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="hide" type="button">hide</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Hide</div>
+            <div id="functionDesc">
+              <p class="showhide">Click this to hide the paragraph text for hide and show buttons.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="show" type="button">show</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Show</div>
+            <div id="functionDesc">
+              <p class="showhide">Click this to hide the paragraph text for hide and show buttons.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="toggle" type="button">toggle</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Toggle</div>
+            <div id="functionDesc">
+              <p class="togglep">This toggles between two paragraphs.</p>
+              <p class="togglep" style="display: none">Second Paragraph!</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="slidedown" type="button">slideDown</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">SlideDown</div>
+            <div id="functionDesc">
+              <p class="slidedownupp" style="background: gray">This slides down the paragraphs.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="slideup" type="button">slideUp</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">SlideUp</div>
+            <div id="functionDesc">
+              <p class="slidedownupp" style="background: gray">This slides up the paragraphs.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="slidetoggle" type="button">slideToggle</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">SlideToggle</div>
+            <div id="functionDesc">
+              <p class="slidetogglep" style="background: gray">This hides and shows the paragraph.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="fadein" type="button">fadeIn</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">FadeIn</div>
+            <div id="functionDesc">
+              <p class="fadeinoutp">This fades in the paragraphs.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="fadeout" type="button">fadeOut</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">FadeOut</div>
+            <div id="functionDesc">
+              <p class="fadeinoutp">This fades out the paragraphs.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="addclass" type="button">addClass</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">AddClass</div>
+            <div id="functionDesc">
+              <p class="addclassp">Click the button to add class 'red' to this paragraph.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="before" type="button">before</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Before</div>
+            <div id="functionDesc">
+              <p class="beforep">... this adds a paragraph before.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="after" type="button">after</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">After</div>
+            <div id="functionDesc">
+              <p class="afterp">This adds a paragraph after ...</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="append" type="button">append</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Append</div>
+            <div id="functionDesc">
+              <p class="appendp">This adds text to the: </p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="html" type="button">html</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">HTML</div>
+            <div id="functionDesc">
+              <p class="htmlp"></p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="attr" type="button">attr</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Attr</div>
+            <div id="functionDesc">
+              <div id="attpicdiv">
+               <img class="attrimg" src="./images/Izak.jpg" data-alt-src="./images/Evan.jpg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="val" type="button">val</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Val</div>
+            <div id="functionDesc">
+              <input id="vali" type="text" value="click the val button" style="text-align:center; height: 30px; width: 200px">
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id="text" type="button">text</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Text</div>
+            <div id="functionDesc">
+              <p class="textp">On click will change the text in this paragraph.</p>
+            </div>
+          </div>
+        </div>
+        <div id="functionSec">
+          <div id="functionButton">
+            <button id='data' type="button">data</button>
+          </div>
+          <div id="descBlock">
+            <div id="functionName">Data</div>
+            <div id="functionDesc">
+              <p class="datap">On click, my name stored was <span class="datas"></span> <span class="datas"></span>. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+   </body>
+</html>

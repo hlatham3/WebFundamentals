@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            $('form').submit(function() {
+                
+                //clear last city and temp output
+                $( "#cityinfo" ).html("");
+
+                // build up your URL
+                var str = $(this).serialize();
+                var city = "";
+                for (var i = 0; i < str.length; i++){
+                  while (str[i] != '='){
+                    i++;
+                  }
+                  i++;
+                  while (i < str.length){
+                    city += str[i];
+                    i++;
+                  }
+                }
+                var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=38bafc64fbe2bc58ae427a5bf0210120";
+
+                //get the info for the city
+                $.get(url, function(res) {
+
+                    console.log(res);
+                    var html_str = "";
+                    html_str += "<h2>" + res.name + "</h2>";
+                    
+                    $( "#cityinfo" ).append(html_str);
+
+                    var Far = Math.round((res.main.temp * 1.8) - 459.67);
+
+                    html_str = "";
+                    html_str += "<h4>Temperature: " + Far + "</h4>";
+                    
+                    $( "#cityinfo" ).append(html_str);
+
+
+                }, 'json');
+                // don't forget to return false so the page doesn't refresh
+                return false;
+            });
+
+        });
+
+    </script>
+   </head>
+   <body>
+      <div id="wrapper">
+        <div id="entercity"><h3>Assignment: Your Very Own Weather Forecast App!</h3>
+          <form align="left"><br>
+                <input align="left" type="text" name="city">
+          <input id="submitbut" type="submit" value="Search Weather">
+        </form>
+        </div>
+        <div id="cityinfo">
+        </div>
+      </div>
+   </body>
+</html>

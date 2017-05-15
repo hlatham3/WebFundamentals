@@ -1,0 +1,221 @@
+/*CSS reset settings here*/
+*{
+ /*outline: thin dotted red;*/
+}
+
+#wrapper{
+	width: 1050px;
+	font-family: "San Francisco", Helvetica, Arial, san-serif;
+	margin: 0;
+}
+
+#header {
+	height: 95px;
+	width: 1050px;
+	margin: 0px;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	background: linear-gradient(#4E69A2, #3B5998);
+}
+
+#headerleft {
+	height: 90px;
+	width: 500px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 40px;
+	padding-left: 20px;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+#headerright {
+	height: 90px;
+	width: 500px;
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+	box-sizing: border-box;
+	padding-top: 15px;
+	padding-left: 110px;
+}
+
+table{
+	font-size: 13px;
+}
+
+#headerspancolor{
+	color: #9FAFD6;
+}
+
+#login{
+	color: white;
+	font-size: 10px;
+	height: 20px;
+	width: 50px;
+	border: thin solid black; 
+	background-color: #4267B1;
+}
+
+#main {
+	height: 550px;
+	width: 1050px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #EDF0F5;
+}
+
+#mainleft{
+	height: 500px;
+	width: 500px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+
+#mainleftheader{
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#mainleftbold{
+	font-weight: bold;
+	color: black;
+	padding-right: 8px;
+}
+
+#mainimg1{
+	height: 75px;
+	width: 500px;
+	display: block;
+	vertical-align: top;
+	font-size: 15px;
+	color: grey;
+}
+
+#mainimg2{
+	height: 75px;
+	width: 500px;
+	display: block;
+	vertical-align: top;
+	font-size: 15px;
+	color: grey;
+}
+
+#mainimg3{
+	height: 75px;
+	width: 500px;
+	display: block;
+	vertical-align: top;
+	font-size: 15px;
+	color: grey;
+}
+
+#imgleft{
+	height: 75px;
+	width: 65px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#imgleftcenter{
+	height: 65px;
+	width: 430px;
+	display: inline-block;
+	box-sizing: border-box;
+	padding-top: 10px;
+	vertical-align: top;
+
+}	
+
+#mainright{
+	height: 500px;
+	width: 370px;
+	display: inline-block;
+	margin-left: 100px;
+}
+
+#mainrighttext {
+	font-size: 10px;
+	color: grey;
+}
+
+#mainrighttextcolor{
+	color: #3B5998;
+	font-size: 10px;
+}
+
+#inputbox{
+	width: 172px; 
+	height: 30px; 
+	box-sizing: border-box;
+	border-radius: 4px; 
+	padding-left: 4px;
+	color: grey;
+	font-size: 15px;
+}
+
+#inputbox2{
+	width: 350px; 
+	height: 30px; 
+	box-sizing: border-box;
+	border-radius: 4px; 
+	padding-left: 4px;
+	color: grey;
+	font-size: 15px;
+}
+
+#submit{
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	height: 35px;
+	width: 175px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px 0 grey, 0 6px 20px 0 rgba(0,0,0,0.19);
+	background: linear-gradient(#94D57A, #598B44);
+	border: thin solid #2C5115; 
+}
+
+#formheader{
+	font-weight: bold;
+	font-size: 35px;
+	margin-bottom: 5px;
+}
+
+#formheaderspan{
+	font-size: 20px;
+	color: #333333;
+}
+
+#lastsent{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#lastcolor{
+	color: #3B5998;
+}
+
+#footer{
+	height: 55px;
+	width: 1050px;
+	text-align: left;
+	color: grey;
+	background-color: white;
+	box-sizing: border-box;
+	padding-top: 20px;
+	padding-left: 20px;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+

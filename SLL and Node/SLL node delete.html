@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>SLL and Node Delete Practice</title>
+      	<script type="text/javascript">
+
+
+	      	function SLL(){
+	      		this.head = null;
+	      	}
+
+	      	function Node(val){
+	      		this.value = val;
+	      		this.next = null;
+	      	}
+
+	      	SLL.prototype.addBack = function(val){
+	      		var myTempNode = new Node(val);
+	      		if (this.head == null){
+	      			this.head = myTempNode;
+	      		} else {
+	      			var cur = this.head;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      			}
+	      			cur.next = myTempNode;
+	      		}
+	      	}
+
+	      	SLL.prototype.delete = function(ind){
+
+	      		if (this.head == null){
+	      			return;
+	      		} else {
+	      			var count = this.length();
+		      		if (ind >= count || ind < 0){
+		      				return;
+		      		}
+	      			if (ind === 0) {
+	      				this.head = this.head.next;
+	      				return;
+	      			} else {
+	      				var cur = this.head;
+	      				for (var i = 1; i < ind; i++){
+	      					cur = cur.next;
+	      				}
+	      				if (ind === length-1){
+	      					cur.next = null;
+	      				} else {
+		      				cur.next = cur.next.next;
+	      				}
+	      			}
+	      		}
+	      	}
+
+	      	SLL.prototype.length = function(){
+	      		if (this.head == null){
+	      			return 0;
+	      		} else {
+	      			var cur = this.head;
+	      			var count = 1;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      				count++;
+	      			}
+	      			return count;
+	      		}
+	      	}
+
+	      	var val;
+	      	var mySLL = new SLL();
+
+	      	mySLL.addBack(1);
+	      	mySLL.addBack(2);
+	      	mySLL.addBack(3);
+	        mySLL.addBack(4);
+	      	mySLL.addBack(5);
+	        mySLL.addBack(6);
+	      	mySLL.addBack(7);
+	      	console.log(mySLL);
+
+	      	var ind;
+	      	mySLL.delete(6);
+	      	console.log(mySLL);
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

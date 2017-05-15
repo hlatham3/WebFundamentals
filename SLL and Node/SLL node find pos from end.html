@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>SLL and Node Practice: Return Node at Pos Counting from End (end node is 0)</title>
+      	<script type="text/javascript">
+
+
+	      	function SLL(){
+	      		this.head = null;
+	      	}
+
+	      	function Node(val){
+	      		this.value = val;
+	      		this.next = null;
+	      	}
+
+	      	SLL.prototype.addBack = function(val){
+	      		var myTempNode = new Node(val);
+	      		if (this.head == null){
+	      			this.head = myTempNode;
+	      		} else {
+	      			var cur = this.head;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      			}
+	      			cur.next = myTempNode;
+	      		}
+	      	}
+
+	      	SLL.prototype.kFromEnd = function(k){
+	      		var count = this.length();
+	      		if (k > count){
+	      			return null;
+	      		} else {
+	      			var pos = count - k - 1;
+	      			return this.elementAtPos(pos);
+	      		}
+	      	}
+
+	      	SLL.prototype.length = function(){
+	      		if (this.head == null){
+	      			return 0;
+	      		} else {
+	      			var cur = this.head;
+	      			var count = 1;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      				count++;
+	      			}
+	      			return count;
+	      		}
+	      	}
+
+	      	SLL.prototype.elementAtPos = function(pos){
+	      		if (this.head == null || pos < 0 || pos >= this.length()){
+	      			return null;
+	      		} else{
+	      			var cur = this.head;
+	      			var ind = 0;
+	      			while (pos != ind){
+	      				cur = cur.next;
+	      				ind++;
+	      			}
+	      		}
+	      		return cur;
+	      	}
+
+	      	var val;
+	      	var mySLL = new SLL();
+
+	      	mySLL.addBack(1);
+	      	mySLL.addBack(2);
+	      	mySLL.addBack(3);
+	      	console.log(mySLL);
+
+	      	var k;
+	      	var returnNode = mySLL.kFromEnd(1);
+	      	console.log(returnNode);
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

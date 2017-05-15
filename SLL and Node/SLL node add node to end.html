@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>SLL and Node Practice Add Node to End</title>
+      	<script type="text/javascript">
+
+
+	      	function SLL(){
+	      		this.head = null;
+	      	}
+
+	      	function Node(val){
+	      		this.value = val;
+	      		this.next = null;
+	      	}
+
+	      	SLL.prototype.addBack = function(val){
+	      		var myTempNode = new Node(val);
+	      		if (this.head == null){
+	      			this.head = myTempNode;
+	      		} else {
+	      			var cur = this.head;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      			}
+	      			cur.next = myTempNode;
+	      			console.log(cur);
+	      		}
+	      	}
+
+	      	var val;
+	      	var mySLL = new SLL();
+	      	console.log(mySLL);
+
+
+	      	mySLL.addBack(1);
+	      	mySLL.addBack(2);
+	      	mySLL.addBack(3);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

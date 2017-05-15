@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Users jQuery</title>
+		<link rel="stylesheet" type="text/css" href="./style/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+        	console.log($);
+
+      		$(document).ready(function(){
+
+			$('form').submit(function(){
+			    console.log($(this).serialize());
+			    var str = $(this).serialize();
+			    var tempcounter = 1;
+			    var firstname = "";
+			    var lastname = "";
+			    var email = "";
+			    var contact = "";
+			    for (var i = 0; i < str.length; i++){
+			    	console.log(i);
+			    	while (str[i] != '='){
+			    		i++;
+			    	}
+			    	i++;
+			    	while (str[i] != '&' && i < str.length){
+			    		console.log(str[i]);
+			    		if (tempcounter === 1) {
+			    			firstname += str[i];
+			    		} else if (tempcounter === 2) {
+			    			lastname += str[i];
+			    		} else if (tempcounter === 3){
+			    			if (str[i] === '%'){
+			    				email += '@';
+			    				i++;
+			    				i++;
+			    			} else {
+			    			email += str[i];
+			    			}
+			    		} else { 
+			    			contact += str[i];
+			    		}
+			  			i++;
+			    	}
+			    	tempcounter++;
+			    }
+			    console.log(firstname);
+			    console.log(lastname);
+			    console.log(email);
+			    console.log(contact);
+			    var tempappendstr = "<tr><td>" + firstname+ "</td><td>" + lastname + "</td><td>" + email + "</td><td>" + contact + "</td></tr>";
+			    console.log(tempappendstr);
+			    $('#myTable').append(tempappendstr);
+			    return false;
+			});
+
+
+      	  	});
+
+    	</script>
+	</head>
+	<body>
+		<div id='header' >
+			<h1>Users</h1>
+		</div>
+		<div id='content'>
+			<table id='myTable'>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Contact #</th>
+				</tr>
+			</table>
+			<br><br>
+			<form align="left"> <h1>Add User</h1> <br>
+	            <label>First Name: </label>
+	            <input align="right" type="text" name="firstname" placeholder="First Name"><br>
+	            <label>Last Name: </label>
+	            <input align="right" type="text" name="lastname" placeholder="Last Name"><br>
+	            <label>Email Address: </label>
+	            <input align="right" type="email" name="email" placeholder="Email Address"><br>
+	            <label>Contact No.:</label>
+	            <input align="right" type="text" name="contactno" placeholder="Phone #"><br>
+	            <br><br>
+				<input id="submitbut" type="submit" value="Add User">
+			</form>
+		</div>
+	</body>
+</html>

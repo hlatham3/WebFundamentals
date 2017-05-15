@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>SLL and Node Insert Practice</title>
+      	<script type="text/javascript">
+
+
+	      	function SLL(){
+	      		this.head = null;
+	      	}
+
+	      	function Node(val){
+	      		this.value = val;
+	      		this.next = null;
+	      	}
+
+	      	SLL.prototype.addBack = function(val){
+	      		var myTempNode = new Node(val);
+	      		if (this.head == null){
+	      			this.head = myTempNode;
+	      		} else {
+	      			var cur = this.head;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      			}
+	      			cur.next = myTempNode;
+	      		}
+	      	}
+
+	      	SLL.prototype.insert = function(ind, myInsertNode){
+
+	      		if (this.head == null){
+	      			return;
+	      		} else {
+	      			var count = this.length();
+		      		if (ind > count || ind < 0){
+		      				return;
+		      		}
+	      			if (ind === 0) {
+	      				var myTempCur = this.head;
+	      				this.head = myInsertNode;
+	      				myInsertNode.next = myTempCur;
+	      				return;
+	      			} else {
+	      				var cur = this.head;
+	      				for (var i = 1; i < ind; i++){
+	      					cur = cur.next;
+	      				}
+	      				var myTempCur = cur.next;
+	      				cur.next = myInsertNode;
+	      				myInsertNode.next = myTempCur;
+	      			}
+	      		}
+	      	}
+
+	      	SLL.prototype.length = function(){
+	      		if (this.head == null){
+	      			return 0;
+	      		} else {
+	      			var cur = this.head;
+	      			var count = 1;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      				count++;
+	      			}
+	      			return count;
+	      		}
+	      	}
+
+	      	var val;
+	      	var mySLL = new SLL();
+
+	      	mySLL.addBack(1);
+	      	mySLL.addBack(2);
+	      	mySLL.addBack(3);
+	      	console.log(mySLL);
+
+			var myInsertNode = new Node(4);
+
+	      	var ind;
+	      	mySLL.insert(3, myInsertNode);
+	      	console.log(mySLL);
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

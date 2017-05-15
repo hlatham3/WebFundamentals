@@ -1,0 +1,288 @@
+/*CSS reset settings here*/
+*{
+ /*outline: thin dotted red;*/
+}
+
+#wrapper{
+	width: 750px;
+	font-family: "Arial", Helvetica, sans-serif;
+	margin: 0;
+}
+
+#header {
+	height: 105px;
+	width: 750px;
+	margin: 0;
+	background-color: white;
+	color: #474747;
+	font-size: 35px;
+	display: inline-block;
+}
+
+#header #headertitle{
+	display: inline-block;	
+	margin: 0;
+	height: 60px;
+	box-sizing: border-box;
+	margin-left: 70px;
+	padding: 20px 10px 10px 10px;
+}
+
+#header #globe{
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	display: inline-block;	
+}
+
+#header #headertitle span{
+	color: #26669C;
+}
+
+#header2 {
+	height: 48px;
+	color: white;
+	background: linear-gradient(#26669C, #5081A9, #26669C);
+	font-size: 25px;
+ 	box-sizing: border-box;
+	padding: 10px 10px 10px 10px;
+	display: block;
+}
+
+#main{
+	height: 600px;
+	width: 750px;
+	display: inline-block;
+	background: linear-gradient(lightgrey, white 20%);
+}
+
+#navBar {
+	height: 450px;
+	width: 165px;
+	font-size: 15px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+#navBar #first{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#navBar #first span{
+	color: red;
+	font-weight: bold;
+}
+
+#navBar #second{
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#navBar #second span{
+	color: #26669C;
+}
+
+#vid{
+	color: white;
+	font-size: 13px;
+	height: 27px;
+	width: 165px;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px 0 grey, 0 6px 20px 0 rgba(0,0,0,0.19);
+	background: linear-gradient(#7D99AD, #26669C);
+}
+
+#resource{
+	margin-top: 2px;
+	color: white;
+	font-size: 13px;
+	height: 27px;
+	width: 165px;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px 0 grey, 0 6px 20px 0 rgba(0,0,0,0.19);
+	background: linear-gradient(#E6A859, #EE7302);
+}
+
+hr {
+	border-bottom: thin solid grey;
+}
+
+#navpic{
+	margin-top: 20px;
+	height: 235px;
+	width: 165px;
+	background-image: url("./ad_background.png");
+}
+
+#navpic p{
+	padding-top: 20px;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	margin: 0px;
+}
+
+#navpic #ninja{
+	height: 85px;
+	width: 70px;
+	display: block;
+    margin: 0px auto 0px auto;
+}
+
+#navpic #learn{
+	color: white;
+	height: 25px;
+	width: 125px;
+	border-color: #23A5B7;
+	border: none;
+	border-radius: 8px;
+	background-color: #23A5B7;
+	display: block;
+    margin: 15px auto 0px auto;
+}
+
+#learn {
+	color: white;
+}
+
+#mainright{
+	height: 525px;
+	width: 575px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#bodyheader {
+	height: 55px;
+	width: 575px;
+	display: block;
+	border-bottom: thin solid grey;
+}
+
+#bodyheaderleft{
+	height: 35px;
+	width: 55px;
+	font-size: 12px;
+	color: #26669C;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#bodyheader #home{
+	width: 18px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 3px;
+}
+
+#bodyheadermiddle{
+	display: inline-block;
+	height: 35px;
+	width: 380px;
+	vertical-align: top;
+}
+
+#bodyheader #phone{
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	padding-top: 5px;
+}
+
+#bodyheaderright{
+	height: 35px;
+	width: 135px;
+	color: grey;
+	font-size: 8px;
+	text-align: right;
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#bodyheaderright span{
+	font-size: 20px;
+	color: #23A5B7;
+}
+
+#mainbody {
+	height: 360px;
+	width: 575px;
+	display: block;	
+	font-size: 11.5px;
+	margin: 0px;
+}
+
+#bodytitles {
+	color: #26669C;
+	font-size: 15px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#mainbody #spanblue {
+	color: #23A5B7;
+}
+
+#mainbody #spanbold {
+	font-weight: bold;
+	color: black;
+}
+
+#mainbody #clientserver {
+	height: 80px;
+	width: 210px;
+    margin: 0px auto 5px auto;
+   	display: block;
+}
+
+#mainbody #listnums {
+	list-style-type: decimal;
+}
+
+ul{
+	margin-top: 3px;
+}
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+#bodyFooter{
+	height: 100px;
+	width: 565px;
+	display: block;
+	border-top: thick solid #26669C;
+	border-left: thick solid #26669C;
+	border-right: thick solid #26669C;
+	box-shadow: 2px 0px grey;
+	font-size: 12px;
+}
+
+#bodyFooter #htmlpic {
+	height: 90px;
+	width: 100px;
+	margin: 0px;
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+
+#bodyFooter #footertitle{
+	color: #26669C;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#bodyFooter #spanfooterblue{
+	color: #23A5B7;
+}
+
+
+
+

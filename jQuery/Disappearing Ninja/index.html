@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>Disappearing Ninjas</title>
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      console.log($);
+
+      $(document).ready(function(){
+      
+        $('.picofninjas').click(function(){
+          $(this).hide();
+        });
+
+        $('.restore').click(function(){
+          $('.picofninjas').show();
+        });
+
+      });
+
+    </script>
+   </head>
+   <body>
+      <div id="wrapper">
+        <h4>jQuery - assignment 1</h4>
+        <div id="ninjaDiv">
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+        </div>
+        <div id="ninjaDiv">
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+          <div id="ninjapic">
+            <img class="picofninjas" src="./images/ninjas.jpg" alt="a pic of ninjas">
+          </div>
+        </div>
+        <div id="button">
+          <button class="restore" type="button">Restore</button>
+        </div>
+      </div>
+   </body>
+</html>
+

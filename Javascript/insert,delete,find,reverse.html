@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>homework</title>
+      	<script type="text/javascript">
+
+	      	function insertPos(arr, toadd, index){
+	      		var arr1 = [];
+	      		var arr2 = [];
+	      		var w = 0;
+	      		if (index > arr.length){
+	      			console.log("Array is shorter than position entered.")
+	      			return;
+	      		}
+	      		for (var i = 0; i < index; i++) {
+	      			arr1[i] = arr[i];
+	      		}
+	      		for (i = index; i < arr.length; i++){
+	      			arr2[w] = arr[i];
+	      			w++;
+	      		}
+
+	      		arr1.push(toadd);
+
+	      		for (var i = 0; i < arr2.length; i++){
+	      			arr1.push(arr2[i]);
+	      		}
+	      		console.log(arr1);
+	      	}
+
+	      	var arr =[];
+	      	var toadd;
+	      	var index;
+	      	insertPos([1,2,3,4,5,8,0], 2, 5);
+
+
+	      	function deletePos(arr, index){
+	      		var arr1 = [];
+	      		var arr2 = [];
+	      		var w = 0;
+
+	      		if (index > arr.length){
+	      			console.log("Array is shorter than position entered.")
+	      			return;
+	      		}
+
+	      		for (var i = 0; i < index + 1; i++) {
+	      			arr1[i] = arr[i];
+	      		}
+
+	      		for (i = index + 1; i < arr.length; i++){
+	      			arr2[w] = arr[i];
+	      			w++;
+	      		}
+
+	      		arr1.pop();
+
+	      		for (var i = 0; i < arr2.length; i++){
+	      			arr1.push(arr2[i]);
+	      		}
+	      		console.log(arr1);
+	      	}
+
+	      	var arr =[];
+	      	var index;
+	      	deletePos([1,2,3,4,11,8,0], 7);
+
+
+	      	function findVal(arr, find){
+
+	      		for (var i = 0; i < arr.length; i++){
+	      			if (arr[i] == find){
+	      				console.log("Found at index " + i);
+	      				return true;
+	      			}
+	      		}
+	      		console.log("Value was not found.");
+	      		return false;
+	      	}
+
+	      	var arr =[];
+	      	var find;
+	      	findVal([1,2,3,4,11,8,0], 13);
+
+	      	function reverseArr(arr){
+	      		var arr1 = [];
+	      		var w = 0;
+
+	      		for (i = arr.length - 1; i >= 0; i--){
+	      			arr1[w] = arr[i];
+	      			w++;
+	      		}
+
+				console.log(arr);
+	      		console.log(arr1);
+
+	      	}
+
+	      	var arr =[];
+	      	reverseArr([1,2,3,4,5,6]);
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

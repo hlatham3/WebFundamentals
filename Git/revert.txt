@@ -1,0 +1,125 @@
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop
+$ mkdir gittest
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop
+$ cd gittest/
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest
+$ git init
+Initialized empty Git repository in /Users/LAT4789/Desktop/gittest/.git/
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master #)
+$ touch index.html
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master #%)
+$ touch styles.css
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master #%)
+$ touch aboutMe.txt
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master #%)
+$ git add .
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +)
+$ ;s
+-bash: syntax error near unexpected token `;'
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +)
+$ ls
+aboutMe.txt index.html  styles.css
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   aboutMe.txt
+	new file:   index.html
+	new file:   styles.css
+
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +)
+$ git commit -m "initial commit of 3 files"
+[master (root-commit) 75b48fc] initial commit of 3 files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master)
+$ vi aboutMe.txt 
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master *)
+$ git add aboutMe.txt
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +)
+$ git commit -m "updated AboutMe"
+[master f1e3bd0] updated AboutMe
+ 1 file changed, 1 insertion(+)
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master)
+$ vi aboutMe.txt 
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master *)
+$ git add aboutMe.txt
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +)
+$ git commit -m "added favorite movie to aboutMe"
+[master 64d4776] added favorite movie to aboutMe
+ 1 file changed, 2 insertions(+)
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master)
+$ git log
+commit 64d47765eedd25432da83484d3f750a1143e1908
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:35:45 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit f1e3bd08d4d3c526fbc78f297d73d90c4e39f705
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:34:28 2017 -0500
+
+    updated AboutMe
+
+commit 75b48fc36a313a5ff6e5e7cb4039920ecf6bd74f
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:33:19 2017 -0500
+
+    initial commit of 3 files
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master)
+$ git revert -n 64d47765eedd25432da83484d3f750a1143e1908
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +|REVERTING)
+$ git commit -m "reverted changes to aboutMe"
+[master a1d032a] reverted changes to aboutMe
+ 1 file changed, 2 deletions(-)
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master)
+$ vi aboutMe.txt 
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master *)
+$ git add aboutMe.txt
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master +)
+$ git commit -m "added favorite book to aboutMe"
+[master cd8c070] added favorite book to aboutMe
+ 1 file changed, 2 insertions(+)
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+LAT4789@Heathers-MacBook-Pro:/users/lat4789/Desktop/gittest (master)
+$ git log
+commit cd8c070a0789faafa7d7c4ab7f7e3f33ec826901
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:38:00 2017 -0500
+
+    added favorite book to aboutMe
+
+commit a1d032ad11a5f3a37d15c3da8ca2bbb7a681ba12
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:36:56 2017 -0500
+
+    reverted changes to aboutMe
+
+commit 64d47765eedd25432da83484d3f750a1143e1908
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:35:45 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit f1e3bd08d4d3c526fbc78f297d73d90c4e39f705
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:34:28 2017 -0500
+
+    updated AboutMe
+
+commit 75b48fc36a313a5ff6e5e7cb4039920ecf6bd74f
+Author: Heather Latham <heatherlatham@northwesternmutual.com>
+Date:   Tue May 9 21:33:19 2017 -0500
+
+    initial commit of 3 files

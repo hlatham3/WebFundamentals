@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      	<title>SLL and Node Practice Find Max Value</title>
+      	<script type="text/javascript">
+
+      	// if you use an array, it would preserve the original SLL
+
+	      	function SLL(){
+	      		this.head = null;
+	      	}
+
+	      	function Node(val){
+	      		this.value = val;
+	      		this.next = null;
+	      	}
+
+	      	SLL.prototype.addBack = function(val){
+	      		var myTempNode = new Node(val);
+	      		if (this.head == null){
+	      			this.head = myTempNode;
+	      		} else {
+	      			var cur = this.head;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      			}
+	      			cur.next = myTempNode;
+	      		}
+	      	}
+
+	      	SLL.prototype.length = function(){
+	      		if (this.head == null){
+	      			return 0;
+	      		} else {
+	      			var cur = this.head;
+	      			var count = 1;
+	      			while (cur.next){
+	      				cur = cur.next;
+	      				count++;
+	      			}
+	      			return count;
+	      		}
+	      	}
+
+	      	SLL.prototype.reverse = function(){
+	      		if(!this.head){
+					return null;
+				} else {
+					var length = this.length();
+					var myNewSLL = new SLL();
+					var origcur = this.head;
+					var end = 0;
+					for (var i = length; i > 0; i--){
+						origcur = this.head;
+						end = 0;
+						while (end < i-1){
+							origcur = origcur.next;
+							end++;
+						}
+						if (myNewSLL.head === null){
+							myNewSLL.head = origcur;
+						} else {
+							var newcur = myNewSLL.head;
+							while (newcur.next) {
+								newcur = newcur.next;
+							}
+							origcur.next = null;
+							newcur.next = origcur;
+						}
+					}
+					return myNewSLL;
+				}
+			}
+
+
+	      	var val;
+	      	var mySLL = new SLL();
+
+	      	mySLL.addBack(2);
+	      	mySLL.addBack(4);
+	      	mySLL.addBack(6);
+	      	mySLL.addBack(8);
+	      	mySLL.addBack(2);	      	
+	      	mySLL.addBack(4);
+	      	mySLL.addBack(6);
+	      	mySLL.addBack(8);
+
+	      	console.log(mySLL);
+	      	reverseSLLvalue = mySLL.reverse();
+	      	console.log(reverseSLLvalue);
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
